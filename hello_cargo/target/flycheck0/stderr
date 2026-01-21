@@ -1,0 +1,52 @@
+   0.004150791s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (/Users/juseon/Documents/gitProject/rust-async-quic-labs/hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint: fingerprint error for hello_cargo v0.1.0 (/Users/juseon/Documents/gitProject/rust-async-quic-labs/hello_cargo)/Check { test: false }/TargetInner { name: "hello_cargo", doc: true, ..: with_path("/Users/juseon/Documents/gitProject/rust-async-quic-labs/hello_cargo/src/main.rs", Edition2024) }
+   0.004171083s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (/Users/juseon/Documents/gitProject/rust-async-quic-labs/hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/juseon/Documents/gitProject/rust-async-quic-labs/hello_cargo/target/debug/.fingerprint/hello_cargo-83e8d63710c6cb31/bin-hello_cargo`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: std::backtrace::Backtrace::capture
+   2: cargo_util::paths::read_bytes
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   5: cargo::core::compiler::fingerprint::prepare_target
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+  17: _main
+   0.007202500s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (/Users/juseon/Documents/gitProject/rust-async-quic-labs/hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint: fingerprint error for hello_cargo v0.1.0 (/Users/juseon/Documents/gitProject/rust-async-quic-labs/hello_cargo)/Check { test: true }/TargetInner { name: "hello_cargo", doc: true, ..: with_path("/Users/juseon/Documents/gitProject/rust-async-quic-labs/hello_cargo/src/main.rs", Edition2024) }
+   0.007210791s  INFO prepare_target{force=false package_id=hello_cargo v0.1.0 (/Users/juseon/Documents/gitProject/rust-async-quic-labs/hello_cargo) target="hello_cargo"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/juseon/Documents/gitProject/rust-async-quic-labs/hello_cargo/target/debug/.fingerprint/hello_cargo-4c69167b00f52b97/test-bin-hello_cargo`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: std::backtrace::Backtrace::capture
+   2: cargo_util::paths::read_bytes
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   5: cargo::core::compiler::fingerprint::prepare_target
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+  17: _main
+    Checking hello_cargo v0.1.0 (/Users/juseon/Documents/gitProject/rust-async-quic-labs/hello_cargo)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.12s
